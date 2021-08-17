@@ -2,9 +2,6 @@ import { Chart } from "react-chartjs-2";
 import * as ChartGeo from "chartjs-chart-geo";
 import React, { useEffect } from "react";
 
-
-const rand = () => Math.round(Math.random() * 5);
-
 const Geo = () => {
   useEffect(() => {
     let canvas = document.getElementById("canvas");
