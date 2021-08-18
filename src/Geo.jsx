@@ -10,8 +10,10 @@ const Geo = () => {
     fetch("https://unpkg.com/us-atlas/states-10m.json")
       .then((r) => r.json())
       .then((us) => {
+        // whole US for the outline
         const nation = ChartGeo.topojson.feature(us, us.objects.nation)
           .features[0];
+        // individual states
         const states = ChartGeo.topojson.feature(
           us,
           us.objects.states
@@ -60,6 +62,7 @@ const Geo = () => {
             },
           },
         });
+        console.log(chart)
       });
   });
 
